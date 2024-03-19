@@ -1,2 +1,3 @@
 GET/wallet
 
+type type
