@@ -1,33 +1,41 @@
 # 3040CryptoAPI
 
-## API Description
+## Description
 
-* Basic API that lets you buy crypto and see your wallet contents.
+* 3040Crypto provides a simple REST API for querying for wallet information, allows you to buy crypto with USD and check the price of a coin.
 
 ## Endpoints
-GET/wallet (all our assets and money I guess)
+* Method: ``GET`` 
+* Endpoint: ``/wallet`` - Returns information about the wallet.
+    * Parameters: 
+      * walletID (String) - A unique UUID4 that is different for every wallet.
 
-    * private key (identifier)
+* Method: ``GET``
+* Endpoint: ``/coinPrice`` - Returns the price of a coin.
+    * Parameters:
+      * coinID (String) - A unique UUID4 that indentifies the coin.
 
-POST/addCrypto (add money to our wallet)
+* Method: ``POST``
+* Endpoint: ``/addCrypto`` - Adds more crypto to your wallet by buying with USD
+    * Parameters:
+      * amountToPurchase (Int) - The amount of crypto we want to want to buy with USD converted.
+      * coinID (String) - A unique UUID4 that identifies the coin.
+      * walletID (String) - A unique UUID4 that indentifies the wallet to add the crypto to.
 
-    * $amount in USD
-    * coin name (the coin we want to buy / add to?)
-    * wallet ID (which wallet we are adding to)
-
-GET/coinPrice (get price of a single coin)
-
-    * coin name 
-    * coin id
 
 ## Resources
+
+* TODO
 
 ## Sample Request and Response
 ### Request
 
-GET/coinPrice ? coinName="BitCoin";coinID="123123123qwe"
+```
+https://3040Crypto.com/api/get/coinPrice?coinID=<COIN_ID>
+```
 
 ### Response
+* An JSON object is returned. 
 
 ```
 {
@@ -36,3 +44,9 @@ GET/coinPrice ? coinName="BitCoin";coinID="123123123qwe"
     "coinPrice": "$70,000 USD"
 } 
 ```
+
+### Response Values Descriptions
+
+* ```coinID``` - (String) - A Unique UUID4 that indentifies the coin
+* ``coinName`` - (String) - The name of the Coin
+* ``coinPrice`` - (String) - The Price of the coin in USD.
