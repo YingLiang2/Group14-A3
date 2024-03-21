@@ -63,7 +63,7 @@
 
 ## Sample Request and Response
 
-### 1. Request coin price:
+### Request coin price:
 
 #### Request
 
@@ -89,45 +89,3 @@ https://3040Crypto.com/api/get/coinPrice?coinID=2131002-V23
 * ``coinName`` - (String) - The name of the Coin
 * ``coinSymbol`` - (String) - The symbol of the Coin
 * ``coinPrice`` - (String) - The Price of the coin in USD.
-
-### 2. Request wallet information:
-
-#### Request
-
-```
-https://3040Crypto.com/api/get/wallet?walletID=2a4f6e89-326b-4c1d-a9d3-22f6e8b76ab1
-```
-
-#### Response
-* An JSON object is returned. 
-
-```json
-{
-  "walletID": "2a4f6e89-326b-4c1d-a9d3-22f6e8b76ab1",
-  "balance": "0.05 BTC",
-  "transactions": [
-    {
-      "transactionID": "4567890",
-      "amount": "0.01 BTC",
-      "type": "deposit",
-      "timestamp": "2024-03-20T12:00:00Z"
-    },
-    {
-      "transactionID": "5678901",
-      "amount": "0.02 BTC",
-      "type": "withdrawal",
-      "timestamp": "2024-03-20T12:30:00Z"
-    }
-  ]
-}
-```
-
-#### Response Values Descriptions
-
-* ```walletID``` - (String) - A unique UUID4 that identifies the wallet.
-* ```balance``` - (String) - The current balance of the wallet in BTC.
-* ```transactions``` - (Array) - An array of transactions associated with the wallet.
-    * ```transactionID``` - (String) - A unique identifier for the transaction.
-    * ```amount``` - (String) - The amount of cryptocurrency involved in the transaction.
-    * ```type``` - (String) - The type of transaction (e.g., deposit, withdrawal).
-    * ```timestamp``` - (String) - The timestamp indicating when the transaction occurred.*
