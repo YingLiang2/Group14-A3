@@ -2,7 +2,7 @@
 
 ## Description
 
-* 3040Crypto provides a simple REST API for querying for wallet information, allows you to buy crypto with USD and check the price of a coin.
+* 3040Crypto provides a simple REST API for querying wallet information, allowing you to buy crypto with USD and check the price of a coin.
 
 ## Endpoints
 
@@ -12,20 +12,20 @@
     * Parameters: 
       * walletID (String) - A unique UUID4 that is different for every wallet.
 
-### 2. ``/coinPrice``
+### 2. ``/coin``
 * Method: ``GET``
-* Endpoint: ``/coinPrice`` - Returns the price of a coin.
+* Endpoint: ``/coin`` - Returns information about the coin.
     * Parameters:
-      * coinID (String) - A unique UUID4 that indentifies the coin.
+      * coinID (String) - A unique UUID4 that identifies the coin.
 
-### 3. ``/addCrypto``
+### 3. ``/wallet/buy``
 * Method: ``POST``
-* Endpoint: ``/addCrypto`` - Adds more crypto to your wallet by buying with USD
+* Endpoint: ``/wallet/buy`` - Adds more crypto to your wallet by buying with USD
     * Parameters:
+      * transactionID (String) - A unique string that is different for every transaction.    
       * amountToPurchase (Int) - The amount of crypto we want to want to buy with USD converted.
       * coinID (String) - A unique UUID4 that identifies the coin.
-      * walletID (String) - A unique UUID4 that indentifies the wallet to add the crypto to.
-
+      * walletID (String) - A unique UUID4 that identifies the wallet to add the crypto to.
 
 ## Resources
 
@@ -68,11 +68,11 @@
 #### Request
 
 ```
-https://3040Crypto.com/api/get/coinPrice?coinID=2131002-V23
+https://3040Crypto.com/api/get/coin/2131002-V23
 ```
 
 #### Response
-* An JSON object is returned. 
+* A JSON object is returned. 
 
 ```json
 {
@@ -85,7 +85,7 @@ https://3040Crypto.com/api/get/coinPrice?coinID=2131002-V23
 
 #### Response Values Descriptions
 
-* ```coinID``` - (String) - A Unique UUID4 that indentifies the coin
+* ```coinID``` - (String) - A Unique UUID4 that identifies the coin
 * ``coinName`` - (String) - The name of the Coin
 * ``coinSymbol`` - (String) - The symbol of the Coin
-* ``coinPrice`` - (String) - The Price of the coin in USD.
+* ``coinPrice`` - (String) - The price of the coin in USD.
