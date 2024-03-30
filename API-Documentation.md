@@ -39,13 +39,16 @@
       "transactionID": "4567890",
       "amount": "0.01 BTC",
       "type": "deposit",
-      "timestamp": "2024-03-20T12:00:00Z"
+      "timestamp": "2024-03-20T12:00:00Z",
+      "status": "successful"
+
     },
     {
       "transactionID": "5678901",
       "amount": "0.02 BTC",
       "type": "withdrawal",
-      "timestamp": "2024-03-20T12:30:00Z"
+      "timestamp": "2024-03-20T12:30:00Z",
+      "status": "successful"
     }
   ]
 }
