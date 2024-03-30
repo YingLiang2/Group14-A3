@@ -33,7 +33,7 @@
 ```json
 {
   "walletID": "2a4f6e89-326b-4c1d-a9d3-22f6e8b76ab1",
-  "balance": "0.05 BTC",
+  "balance": "5000 USD",
   "transactions": [
     {
       "transactionID": "4567890",
