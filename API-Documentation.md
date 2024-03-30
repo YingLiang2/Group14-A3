@@ -37,19 +37,19 @@
   "transactions": [
     {
       "transactionID": "4567890",
-      "amount": "0.01 BTC",
+      "amount": "500 USD",
       "type": "deposit",
       "timestamp": "2024-03-20T12:00:00Z",
       "status": "successful"
-      "message": ""
+      "message": "0.01 BTC has be successfully deposited into your account 2a4f6e89-326b-4c1d-a9d3-22f6e8b76ab1"
     },
     {
       "transactionID": "5678901",
-      "amount": "0.02 BTC",
+      "amount": "750 USD",
       "type": "withdrawal",
       "timestamp": "2024-03-20T12:30:00Z",
       "status": "successful",
-      "message": "0.02 BTC has been successfully withdrawn from account 5678901"
+      "message": "0.02 BTC has been successfully withdrawn from account 2a4f6e89-326b-4c1d-a9d3-22f6e8b76ab1"
     }
   ]
 }
