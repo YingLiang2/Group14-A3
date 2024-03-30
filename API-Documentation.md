@@ -18,9 +18,9 @@
     * Parameters:
       * coinID (String) - A unique UUID4 that identifies the coin.
 
-### 3. ``/wallet/buy``
+### 3. ``/coin/buy``
 * Method: ``POST``
-* Endpoint: ``/wallet/buy`` - Adds more crypto to your wallet by buying with USD
+* Endpoint: ``/coin/buy`` - Adds more crypto to your wallet by buying with USD
     * Parameters:
       * transactionID (String) - A unique string that is different for every transaction.    
       * amountToPurchase (Int) - The amount of crypto we want to want to buy with USD converted.
